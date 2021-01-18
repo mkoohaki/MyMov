@@ -1,0 +1,85 @@
+//-link to the header.pug file in the partials folder in views
+extends partials/header
+
+//-link to the block position in header.pug file in the partials folder in views
+block content
+    h1#h1retrieving= message 
+    p#msg
+    br
+    - var moviesName= []
+    if(items)
+        table
+            tr
+                th MOVIE
+                th DIRECTOR
+                th YEAR
+                th RUNTIME
+                th POSTER
+                th
+
+            each item in items
+                tr 
+                    td= item.name
+                    td= item.director
+                    td= item.year
+                    td= item.runtime
+                    td
+                        img(src=item.image width='150px')
+                    td
+                        form(method='POST' action='/delete/' + item.id)
+                            button(type='submit' value='Delete' id="item_submit_button") Delete
+            if(items.length==5)
+                script.
+                    var msg = document.getElementById("msg")
+                    msg.innerHTML = "You alearedy selected 5 movies!"
+                    msg.style.backgroundColor = 'red'
+                    msg.style.color = 'white'
+                    msg.style.height = "40px"
+                    msg.style.textAlign = "center"
+                    msg.style.marginTop = "-22px"
+                    msg.style.paddingTop = "10px"
+
+
+    div#item_form
+        form(method='POST' action='/search')
+            div#item_input_form
+                input(type='hidden' name='seller' value=user.username)
+                input(type='hidden' name='userId' value=user.id)
+                input(type='text' name='name' placeholder='Movie name' class='item_input' id="username")
+                div#item_submit
+                    button(type='submit' value='Submit' id="item_submit_button") Search
+ 
+    if(movies) 
+        table
+            caption= "Result for searching \"" + name +"\""
+            tr
+                th.th_search MOVIE
+                th.th_search YEAR
+                th.th_search POSTER
+                th.th_search
+
+            each movie in movies
+  
+                tr 
+                    td.td_search= movie[0]
+                    td.td_search= movie[1]
+                    td.td_search
+                        img(src=`${movie[2]}` width='150px')
+
+                    td.td_search
+                        - var duplicate = false
+                        each item in items
+                                if (item.name === movie[0])
+                                    - duplicate = true
+                        if(duplicate)
+                            //-It does not save because the application checks the databse before saving, it means if I put complete form for button it did not make any difference
+                            button(type='submit' value='Saved' id="item_saved_button") S a v e d
+                        else
+                            form(method='POST' action='/save/' + movie[0])
+                                input(type='hidden' name='seller' value=user.username)
+                                input(type='hidden' name='userId' value=user.id)
+                                button(type='submit' value='Save' id="item_save_button") Save
+
+
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer

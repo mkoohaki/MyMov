@@ -1,0 +1,6 @@
+C:\HardDrive\College\Semester 4\JavaScript Frameworks\MyMov\MyMov\obj\Debug\MyMov.njsproj.CoreCompileInputs.cache
+C:\HardDrive\College\Semester 4\JavaScript Frameworks\MyMov\MyMov\bin\Microsoft.NodejsTools.WebRole.dll
+C:\HardDrive\College\Semester 4\JavaScript Frameworks\MyMov\MyMov\obj\Debug\mymov.njsprojAssemblyReference.cache
+C:\HardDrive\College\Semester 4\JavaScript Frameworks\MyMovies\MyMovies\MyMov\obj\Debug\mymov.njsprojAssemblyReference.cache
+C:\HardDrive\College\Semester 4\JavaScript Frameworks\MyMovies\MyMovies\MyMov\obj\Debug\mymov.njsproj.CoreCompileInputs.cache
+C:\HardDrive\College\Semester 4\JavaScript Frameworks\MyMovies\MyMovies\MyMov\bin\Microsoft.NodejsTools.WebRole.dll
