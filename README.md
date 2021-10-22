@@ -1,5 +1,5 @@
 # MYMOVIES
-<img src="images/ProjectTree.JPG" width="250px" height="auto"><br>
+<img src="images/Capture.JPG" width="100%" height="auto"><br>
 
 MYMOVIES is a web application which is created in Visual Studio by using full-stack JavaScript solution.<br>
 - This applicatoin comprises three major building blocks of 4 possible layers:<br>
