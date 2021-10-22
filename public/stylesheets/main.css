@@ -11,7 +11,7 @@ body {
     font-family: verdana, Arial, sans-serif;
     font-size: 20px;
     color: black;
-    background-color: #FFC0CB;
+    background-color: #74d69b;
     position: relative;
     top: 30px;
 }
@@ -317,7 +317,7 @@ h1 a {
 
 #title {
     position: relative;
-    background-color: #FFC0CB;
+    background-color: #74d69b;
 }
 
 #logo {
@@ -407,7 +407,7 @@ h1 a {
 }
 
 #item_saved_button {
-    background-color: #FFC0CB;
+    background-color: #74d69b;
     color: #C71585;
 }
 
